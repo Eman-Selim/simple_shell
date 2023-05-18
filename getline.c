@@ -2,11 +2,10 @@
 
 /**
  * input_buf - function is responsible for buffering the command
- * @info: parameter struct
- * @buf: address of buffer
- * @len: address of len var
- *
- * Return: bytes read
+ * @info: the address   in   the struct variable
+ * @buf: the address   in   the buffer variable
+ * @len: this variable saves pointer to the length of the variable
+ * Return: integer
  */
 ssize_t input_buf(info_t *info, char **buf, size_t *len)
 {
@@ -45,10 +44,9 @@ ssize_t input_buf(info_t *info, char **buf, size_t *len)
 }
 
 /**
- * get_input - gets a line minus the newline
- * @info: parameter struct
- *
- * Return: bytes read
+ * get_input - this function is responsible for getting the input line
+ * @info: the address   in   the struct variable
+ * Return: it returns      the input
  */
 ssize_t get_input(info_t *info)
 {
@@ -90,12 +88,11 @@ ssize_t get_input(info_t *info)
 }
 
 /**
- * read_buf - reads a buffer
- * @info: parameter struct
- * @buf: buffer
- * @i: size
- *
- * Return: r
+ * read_buf - this function is responsible for reading the buffer
+ * @info: the address   in   the struct variable
+ * @buf: pointer to the buffer string
+ * @i: pointer to the size
+ * Return: integer
  */
 ssize_t read_buf(info_t *info, char *buf, size_t *i)
 {
@@ -110,12 +107,11 @@ ssize_t read_buf(info_t *info, char *buf, size_t *i)
 }
 
 /**
- * _getline - gets the next line of input from STDIN
- * @info: parameter struct
- * @ptr: address of pointer to buffer, preallocated or NULL
- * @length: size of preallocated ptr buffer if not NULL
- *
- * Return: s
+ * _getline - this function is responsible for getting the line
+ * @info: the address   in   the struct variable
+ * @ptr: pointer to the buffer string
+ * @length: pointer to the size
+ * Return: integer
  */
 int _getline(info_t *info, char **ptr, size_t *length)
 {
@@ -157,10 +153,9 @@ int _getline(info_t *info, char **ptr, size_t *length)
 }
 
 /**
- * sigintHandler - blocks ctrl-C
- * @sig_num: the signal number
- *
- * Return: void
+ * sigintHandler - this function is responsible for flush
+ * @sig_num: integer that containe the signal
+ * Return: no return value
  */
 void sigintHandler(__attribute__((unused))int sig_num)
 {
