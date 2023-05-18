@@ -47,9 +47,8 @@ void print_error(info_t *info, char *estr)
 /**
  * print_d - this function is responsible for printing integer
  * @input: the integer to print
- * @fd: the filedescriptor to write to
- *
- * Return: number of characters printed
+ * @fd: the inputed file descriptor
+ * Return: the counted number of chars in the string
  */
 int print_d(int input, int fd)
 {
@@ -84,12 +83,11 @@ int print_d(int input, int fd)
 }
 
 /**
- * convert_number - converter function, a clone of itoa
- * @num: number
- * @base: base
- * @flags: argument flags
- *
- * Return: string
+ * convert_number - this function is esponsible for converting
+ * @num: the input number
+ * @base: the base to be converted to
+ * @flags: the flag that indecate the sign and the case
+ * Return: ptr
  */
 char *convert_number(long int num, int base, int flags)
 {
@@ -120,10 +118,10 @@ char *convert_number(long int num, int base, int flags)
 }
 
 /**
- * remove_comments - function replaces first instance of '#' with '\0'
- * @buf: address of the string to modify
- *
- * Return: Always 0;
+ * remove_comments - this function is responsible for replacing
+ * the first # with \0
+ * @buf: the string address to be modified
+ * Return: zero
  */
 void remove_comments(char *buf)
 {
