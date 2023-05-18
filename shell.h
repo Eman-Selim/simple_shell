@@ -54,23 +54,23 @@ typedef struct liststr
  *struct passinfo - a structure that contains info that will be passed
  * to function
  *@arg: a string generated from getline containing arguements
- *@argv: an array of strings generated from arg
- *@path: a string path for the current command
- *@argc: the argument count
- *@line_count: the error count
- *@err_num: the error code for exit()s
- *@linecount_flag: if on count this line of input
- *@fname: the program filename
- *@env: linked list local copy of environ
- *@environ: custom modified copy of environ from LL env
- *@history: the history node
- *@alias: the alias node
- *@env_changed: on if environ was changed
- *@status: the return status of the last exec'd command
- *@cmd_buf: address of pointer to cmd_buf, on if chaining
- *@cmd_buf_type: CMD_type ||, &&, ;
- *@readfd: the fd from which to read line input
- *@histcount: the history line number count
+ *@argv:arg returni ng value as array
+ *@path: the path of the command as tring
+ *@argc: thenumber ofaruments
+ *@line_count: the number of errors
+ *@err_num: the number that indicate exit error
+ *@linecount_flag: flag that indicate to count input line
+ *@fname: the name of the program file
+ *@env: environment copy that is local formed as linked list 
+ *@environ: environment copy of the modified lnked list
+ *@history: the node that is inhistory
+ *@alias: node that is alias
+ *@env_changed: flag that indicate change in environment
+ *@status: the status retuned from the command that executd lastly
+ *@cmd_buf: address of pointer to command buffer
+ *@cmd_buf_type: command buffer type
+ *@readfd: the variable that responsible forget the input line
+ *@histcount: the coun of history lines
  */
 typedef struct passinfo
 {
@@ -89,8 +89,8 @@ typedef struct passinfo
 	int env_changed;
 	int status;
 
-	char **cmd_buf; /* pointer to cmd ; chain buffer, for memory mangement */
-	int cmd_buf_type; /* CMD_type ||, &&, ; */
+	char **cmd_buf;
+	int cmd_buf_type;
 	int readfd;
 	int histcount;
 } info_t;
@@ -100,9 +100,9 @@ typedef struct passinfo
 	0, 0, 0}
 
 /**
- *struct builtin - contains a builtin string and related function
- *@type: the builtin command flag
- *@func: the function
+ *struct builtin - structure that contained string and functions
+ *@type: the flag of the command
+ *@func: refering to functions
  */
 typedef struct builtin
 {
