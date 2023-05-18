@@ -3,8 +3,7 @@
 /**
  * _myhistory - this function is responsible for displaying the list of history
  * each command in a separated odered line starting from 0
- * @info: Structure containing potential arguments. Used to maintain
- *        constant function prototype.
+ * @info: potential argument contained in structure
  *  Return: 0
  */
 int _myhistory(info_t *info)
@@ -14,11 +13,10 @@ int _myhistory(info_t *info)
 }
 
 /**
- * unset_alias - sets alias to string
- * @info: parameter struct
- * @str: the string alias
- *
- * Return: Always 0 on success, 1 on error
+ * unset_alias - this function is responsible for removing the string anonymity
+ * @info: arguments contained in structure
+ * @str: the anonymity of the string
+ * Return:  zero or one
  */
 int unset_alias(info_t *info, char *str)
 {
@@ -37,11 +35,10 @@ int unset_alias(info_t *info, char *str)
 }
 
 /**
- * set_alias - sets alias to string
- * @info: parameter struct
- * @str: the string alias
- *
- * Return: Always 0 on success, 1 on error
+ * set_alias - this function is responsible for putting the string anonymity
+ * @info: arguments contained in structure
+ * @str: the anonymity of the string
+ * Return: zero or one
  */
 int set_alias(info_t *info, char *str)
 {
@@ -58,10 +55,9 @@ int set_alias(info_t *info, char *str)
 }
 
 /**
- * print_alias - prints an alias string
- * @node: the alias node
- *
- * Return: Always 0 on success, 1 on error
+ * print_alias - this function is responsible for printing the string anonymity
+ * @node: the node of anonymity
+ * Return: zero or one
  */
 int print_alias(list_t *node)
 {
@@ -81,10 +77,9 @@ int print_alias(list_t *node)
 }
 
 /**
- * _myalias - mimics the alias builtin (man alias)
- * @info: Structure containing potential arguments. Used to maintain
- *          constant function prototype.
- *  Return: Always 0
+ * _myalias - this function is responsible for simulating the anonymity
+ * @info: arguments contained in structure
+ *  Return: zero
  */
 int _myalias(info_t *info)
 {
