@@ -15,7 +15,7 @@ void clear_info(info_t *info)
 /**
  * set_info - this function is responsible for setting the struct values
  * @info: the address   in   the struct variable
- * @av: argument vector
+ * @av: pointer to pointer
  */
 void set_info(info_t *info, char **av)
 {
@@ -45,9 +45,9 @@ void set_info(info_t *info, char **av)
 }
 
 /**
- * free_info - frees info_t struct fields
- * @info: struct address
- * @all: true if freeing all fields
+ * free_info - function is responsible for freeing the vars saved on struct
+ * @info: the address   in   the struct variable
+ * @all: flag indicating if freeing all vars in struct
  */
 void free_info(info_t *info, int all)
 {
