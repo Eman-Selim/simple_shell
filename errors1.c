@@ -29,10 +29,9 @@ int _erratoi(char *s)
 
 /**
  * print_error - this function is responsible for printing the error
- * @info: the parameter & return info struct
- * @estr: string containing specified error type
- * Return: 0 if no numbers in string, converted number otherwise
- *        -1 on error
+ * @info: potential argument contained in structure
+ * @estr: the type of the error saved as string
+ * Return: zero or the number or -1
  */
 void print_error(info_t *info, char *estr)
 {
@@ -46,8 +45,8 @@ void print_error(info_t *info, char *estr)
 }
 
 /**
- * print_d - function prints a decimal (integer) number (base 10)
- * @input: the input
+ * print_d - this function is responsible for printing integer
+ * @input: the integer to print
  * @fd: the filedescriptor to write to
  *
  * Return: number of characters printed
